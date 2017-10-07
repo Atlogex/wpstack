@@ -1,0 +1,2 @@
+# wpstack
+Temporary garbage dump
