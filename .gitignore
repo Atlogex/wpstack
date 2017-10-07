@@ -1,0 +1,24 @@
+# Atlogex gitignore for develop wp
+/.idea/
+/webstat/
+/wp-snapshots/
+/wp-admin/*
+/wp-includes/*
+
+# Exlude file root directory
+/license.txt
+/wp-mail.php
+/wp-trackback.php
+/wp-cron.php
+/wp-login.php
+/wp-links-opml.php
+/wp-activate.php
+/wp-config-sample.php
+/wp-settings.php
+/wp-signup.php
+/readme.html
+/wp-load.php
+/wp-blog-header.php
+/wp-comments-post.php
+/wp-config.php
+/xmlrpc.php
