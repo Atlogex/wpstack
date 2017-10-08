@@ -6,6 +6,8 @@
  * @link https://atlogex.com/linkforarticle
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage Atlogex-Minimal
+ * @since Atlogex-Minimal 1.0
+ *
+ * YOUR_THEME_NAME - Name (alias/name dir theme) Your theme
  */

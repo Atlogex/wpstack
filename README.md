@@ -24,4 +24,4 @@ A set of gists for WordPress - themes, plugins, functions, webhooks and more. Us
  -------------------
 
 - Composer `(maybe)`
-- Webpack `(maybe)`
+- Webpack or Gulp `(maybe)`
