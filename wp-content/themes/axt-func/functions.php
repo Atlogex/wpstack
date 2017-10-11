@@ -126,6 +126,69 @@ add_action('wp_ajax_nopriv_sendmail', 'my_action_callback');
 
 
 /**
+ * Add new image size for crop
+ */
+function image_settings()
+{
+	// ru: Принудительно заставляем обрезать/сжимать изображения
+	// en: Make your size for image
+	if (function_exists('add_image_size')) {
+		// use out get_the_post_thumbnail($post->ID, 'thumb110x73' );
+		add_image_size('thumb110x73', 110, 73, true); //(cropped)
+		add_image_size('thumb370x247', 370, 247, true); //(cropped)
+		add_image_size('thumb385x257', 385, 257, true); //(cropped)
+	}
+}
+
+add_action('after_setup_theme', 'image_settings');
+/* ----------- /Add ----------- */
+
+
+/**
+ * Load Bootstrap
+ */
+
+function load_bootstrap()
+{
+	// Bootstrap stylesheet.
+	wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/libs/bootstrap/css/bootstrap.min.css', array(), ' ');
+
+	//Mytheme stylesheet.
+	wp_enqueue_style('mytheme-style', get_template_directory_uri() . '/css/style.css', array(), ' ');
+
+	//Bootstrap js
+	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/libs/bootstrap/js/bootstrap.min.js', array('jquery'), ' ');
+}
+
+add_action('wp_enqueue_scripts', 'load_bootstrap');
+/* ----------- /Add ----------- */
+
+
+
+/* --------------------------------------------------------------------------
+ * Disable Emojii
+ * -------------------------------------------------------------------------- */
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('admin_print_styles', 'print_emoji_styles');
+remove_filter('the_content_feed', 'wp_staticize_emoji');
+remove_filter('comment_text_rss', 'wp_staticize_emoji');
+remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+add_filter('tiny_mce_plugins', 'disable_wp_emojis_in_tinymce');
+function disable_wp_emojis_in_tinymce($plugins)
+{
+	if (is_array($plugins)) {
+		return array_diff($plugins, array('wpemoji'));
+	} else {
+		return array();
+	}
+}
+/* ----------- /Add ----------- */
+
+
+
+/**
  * Add
  */
 
