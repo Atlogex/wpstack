@@ -189,6 +189,64 @@ function disable_wp_emojis_in_tinymce($plugins)
 
 
 /**
+ * Pagination BAD PRACTICE
+ * Template - <?php pagination($posts->max_num_pages); ?>
+ */
+
+function pagination($pages = '', $range = 4)
+{
+	$showitems = ($range * 2) + 1;
+	$out = '';
+	global $paged; // Номер текущей страницы
+//	var_dump($paged);
+	if (empty($paged)) $paged = 1;
+
+	if ($pages == '') {
+		global $wp_query;
+		$pages = $wp_query->max_num_pages;
+		if (!$pages) {
+			$pages = 1;
+		}
+	}
+	if (1 != $pages OR 1) {
+
+		$out .= '<div class="b_pagination"> ';
+
+		($paged > 1) ? $class = '' : $class = 'b_pgn__no-activ';
+
+		$out .= '<a href="' . get_pagenum_link($paged - 1) . '" class="b_pagination_prev ' . $class . '">
+					<span class="b_slide-pgn_arrow-prev">➜</span> <span 	class="b_pgn-text">Previous Page</span>
+				</a> ';
+
+		$out .= '<div class="b_pagination_pages">';
+		for ($i = 1; $i <= $pages; $i++) {
+			$class = '';
+			if ($paged == $i) {
+				$class = 'b_pgn__a-no-activ';
+			}
+			$out .= '<div class="b_pagination_pages-block ' . $class . '"><a href="' . get_pagenum_link($i) . ' ">' . $i . '</a></div>';
+
+		}
+
+		$out .= '</div> ';
+
+		if ($paged < $pages) {
+			$class = '';
+		} else {
+			$class = 'b_pgn__no-activ';
+		}
+		$out .= '	<a href="' . get_pagenum_link($paged + 1) . '" class="b_pagination_next text-right ' . $class . '">
+						<span class="b_pgn-text">Next Page</span>➜
+					</a>';
+		$out .= '</div>';
+
+		echo $out;
+	}
+}
+/* ----------- /Add ----------- */
+
+
+/**
  * Add
  */
 
