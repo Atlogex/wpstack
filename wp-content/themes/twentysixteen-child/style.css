@@ -1,0 +1,145 @@
+/*
+Theme Name: Twenty Sixteen
+Theme URI: https://wordpress.org/themes/twentysixteen/
+Template:       twentysixteen
+Author: the WordPress team and Atlogex
+Author URI: https://atlogex.com/
+Author URI: https://wordpress.org/
+Description: Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere.
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
+Text Domain: twentysixteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@import url("../twentysixteen/style.css");
+
+.site-header {
+	padding: 0 4.5455%;
+}
+
+.tax-product_category article.product {
+	width: 32%;
+	margin: 0.48%;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 2.0em;
+}
+
+.tax-product_category article.product .post-thumbnail {
+	margin-bottom: 0.625em;
+}
+
+body.tax-product_category article.product .entry-content {
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	float: left;
+	font-size: 0.8em;
+}
+
+.tax-product_category article.product .entry-title {
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.entry-price {
+	height: 40px;
+	text-align: center;
+}
+
+.ep-standart {
+	margin: auto;
+}
+
+span.ep-price {
+	font-size: 0.8em;
+	color: #ad0b0b;
+	text-decoration: line-through;
+}
+
+span.ep-pricesale {
+	margin: auto;
+	font-weight: bold;
+	color: #179c35;
+}
+
+.btn-order {
+	background: #1a1a1a;
+	border: 0;
+	border-radius: 2px;
+	color: #fff;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-weight: 700;
+	letter-spacing: 0.046875em;
+	line-height: 1;
+	padding: 0.84375em 0.875em 0.78125em;
+	text-transform: uppercase;
+	transition: 300ms;
+	overflow: hidden;
+	width: 70%;
+	text-align: center;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.btn-order:hover {
+	background: #007acc;
+	transition: 300ms;
+}
+
+.cf-buyitnow {
+	display: none;
+	position: fixed;
+	width: 400px;
+	left: 50%;
+	margin-left: -200px;
+	padding: 5% 2% 0;
+	top: 15%;
+	text-align: center;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 0.74);
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.9);
+	box-shadow: 0px 0px 40px rgb(0, 0, 0);
+	z-index: 100;
+}
+
+.cf-buyitnow input[type="text"], .cf-buyitnow input[type="email"], .cf-buyitnow input[type="tel"], .cf-buyitnow input[type="number"], .cf-buyitnow textarea {
+	background: #f7f7f7;
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+	border: 1px solid #d1d1d1;
+	border-radius: 2px;
+	color: #686868;
+	padding: 6px 4px;
+	width: 100%;
+}
+
+.cf-buyitnow input[type="submit"] {
+	background: rgba(255, 0, 0, 0.72);
+}
+
+.cf-buyitnow p {
+	margin: 0 0 1em;
+}
+
+.cf-product-url {
+	display: none;
+}
+
+.cf-close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	filter: brightness(10);
+	cursor: pointer;
+}
+
+.cf-custominfo {
+	text-align: center;
+	color: #fff;
+	margin-bottom: 10px;
+}
