@@ -189,16 +189,14 @@ function disable_wp_emojis_in_tinymce($plugins)
 
 
 /**
- * Pagination BAD PRACTICE
+ * Pagination [BAD PRACTICE!]
  * Template - <?php pagination($posts->max_num_pages); ?>
  */
 
 function pagination($pages = '', $range = 4)
 {
-	$showitems = ($range * 2) + 1;
 	$out = '';
-	global $paged; // Номер текущей страницы
-//	var_dump($paged);
+	global $paged;
 	if (empty($paged)) $paged = 1;
 
 	if ($pages == '') {

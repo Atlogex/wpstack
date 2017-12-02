@@ -1,9 +1,11 @@
 # WP-Stack
-<p align="center"><img src="https://atlogex.com/images/out-rsrc/github-wordpress-logo-riva-200.png"></p>
+<p align="center"><img width="100" src="https://atlogex.com/images/out-rsrc/github-wordpress-logo-riva-200.png"></p>
 
 WP-Stack repo by [Atlogex](https://www.atlogex.com/).
 
-This theme for post about create simple Online-shop due to plugins - Custom Post Type UI + Advanced Custom Fields. Post - https://atlogex.com/wp-shop-and-custom-post-type-ui/
+This theme for post about create simple Online-shop due to plugins - Custom Post Type UI + Advanced Custom Fields.
+
+Post - https://atlogex.com/wp-shop-and-custom-post-type-ui/
 
 
  Structure WP Themes
