@@ -4,6 +4,8 @@
 /wp-snapshots/
 /wp-admin/*
 /wp-includes/*
+/wp-content/plugins/*
+!/wp-content/plugins/ax-plugin/
 
 # Exlude file root directory
 /license.txt
