@@ -7,6 +7,7 @@ function validEmail(email) {
 	}
 	return r;
 }
+// /Add
 
 // Formatted Number
 function formatStr(str) {
