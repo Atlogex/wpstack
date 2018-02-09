@@ -14,13 +14,19 @@
 
 $tpl = get_category_template();
 
-$cat_meta = get_option( "category_templates");
+// en: SANITAIZE RULES FOR TAGS ATTRIBUTES
+// ru: Отключаем вырезание атрибутов у тегов (img, a) в редакторе
+function wph_add_all_elements($init) {
+	if(current_user_can('unfiltered_html')) {
+		$init['extended_valid_elements'] = 'img[*],a[*]';
+	}
+	return $init;
+}
+add_filter('tiny_mce_before_init', 'wph_add_all_elements', 20);
+// /Add
 
-//$cat_template = new Custom_Category_Template();
-//var_dump($tpl);
-//var_dump($cat_meta);
-//var_dump($cat_template);
 
+//add_action( 'init', 'allow_onclick_content' );
 
 // * Определим константу, которая будет хранить путь к папке single
 define('SINGLE_PATH', TEMPLATEPATH . '/single');
